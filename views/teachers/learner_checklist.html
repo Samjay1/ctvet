@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/public/images/logo.png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="public/images/logo.png" sizes="16x16">
+    <link rel='stylesheet' type='text/css' href='../public/css/style.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/public/css/index.min.css" />
+    <link rel="stylesheet" href="/public/css/mystyles.css" />
+
+    <title>TVET - Assessor</title>
+</head>
+<body style="font-family: 'Roboto', sans-serif;" class=" font-normal relative">
+    <!--TOP HEADER Appstore and Playstore links -->
+   
+
+
+
+     <!-- MAIN HEADER -->
+     <nav class="bg-white border-b-4 border-green-700 shadow-lg lg:bg-gray-100 text-gray-800 shadow-lg">
+        <!-- Mobile menu -->
+        <div class="flex justify-between w-11/12 m-auto">
+            
+            <div class="flex px-2 pt-2">
+                <a class="lg:mr-5" href="index.html">
+                    <img class="h-14 object-fill w-44 p-2" src="/public/images/logo.png" alt="">
+                </a>
+                
+            </div>
+            <div class="mt-2 py-3 h-16 flex space-x-8">
+                <a class="lg:block hidden px-3 py-2  border-b border-gray-100 hover:border-yellow-500 hover:text-yellow-500 transition duration-300 text-sm" href="dashboard.html">StaffID: <span class="font-bold">ST0023</span></a>
+                <a class="lg:block hidden px-3 py-2  border-b border-gray-100 hover:border-yellow-500 hover:text-yellow-500 transition duration-300 text-sm" href="password_reset.html">Change Password</a>
+                <a class="lg:block hidden px-3 py-2  border-b border-gray-100 hover:border-yellow-500 hover:text-yellow-500 transition duration-300 text-sm" href="login.html">Log Out</a>  
+                <!-- <a id="profilebtn" class="bg-gray-300 rounded-3xl shadow-lg  block" href="#"><img id="profileimg" class="h-9 w-9 object-cover object-top rounded-3xl" src="/public/images/d1.jpeg" alt=""></a> -->
+                <a id="profilebtn" class="text-yellow-500 block lg:hidden mt-3" href="#">
+                    <svg id="profileimg" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path id="profileimg" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- PROFILE DROPDOWN -->
+    <div class="relative">
+        <div id="menulist" class="absolute z-10 hidden block space-y-1 right-0 border w-56 bg-white  mx-1 my-1 rounded-lg">
+            <p class="border-b w-full hover:bg-yellow-500 hover:text-white"><a class="px-2 pr-6 py-2 block" href="dashboard.html"> StaffID: <span class="font-bold">ST0023</span></a></p>
+            <p class="border-b w-full hover:bg-yellow-500 hover:text-white"><a class="px-2 pr-6 py-2 block" href="password_reset.html"> Change Password</a></p>
+            <p class="border-b w-full hover:bg-yellow-500 hover:text-white"><a class="px-2 pr-6 py-2 block"  href="login.html"> Log Out</a></p>
+        </div>
+    </div>
+
+
+    <!-- MAIN SECTION -->
+    <div class="lg:w-10/12 w-11/12 m-auto my-10 ">
+         
+
+
+        <div class="shadow-xl rounded-lg border my-10">
+               <!-- Content here -->
+               
+            <div class="p-4 bg-white mt-5 rounded-lg space-y-3">
+                <p class="text-xl uppercase font-bold">Learners Questionnaire </p>
+
+                <p>TVET: <span class='font-bold text-2xl'>ABC 1</span></p>
+           
+            <div class="my-5">
+                <a href="dashboard.html" class="text-green-700 underline px-3 p-1 rounded-3xl">Go Back</a>
+
+                <div class="text-base font-normal space-y-1 my-10">
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2 ">1.  How satisfied were you with the orientation/induction ceremony that the institution conducted for you?  (If this was not held also mark-NO) </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    Very Unsatisfied
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    Unsatisfied
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     Normal
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    Satisfied 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     Very satisfied 
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">
+                           2. Are you satisfied with the scholarships/sponsorship being offered to you?
+                        </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <!-- <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select> -->
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    Very Unsatisfied
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    Unsatisfied
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     Normal
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    Satisfied 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     Very satisfied 
+                                </label>
+                            </div>
+                            <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Comments" name="bodies" id="" cols="30" rows="10"></textarea>
+                       
+                        </div>
+                       
+                    </div>
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">3. How satisfied are you with the conducive learning
+                            environment being provided to you?</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2 ">4. Are you satisfied with the hostel/Hall/Dormitory facility being provided to you? (if not provided at all also mark NO) </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    Very Unsatisfied
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    Unsatisfied
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     Normal
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    Satisfied 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     Very satisfied 
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">5. Are you satisfied with the health facility being made available to you? </p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">6. Are you satisfied with the accessibility of the health facility being made available to you?</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">7. Are you satisfied with the information provided to you with respect to attachment opportunities for learners/students?</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">8. Are you satisfied with the amount of learning resources the Institution provides to help you carry out your tasks?</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">9. Are you satisfied that the Institution is providing you with the right and appropriate learning materials?</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">10. Are you satisfied that your facilitators/teachers help you to relate your prior knowledge in your current training?</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">11. Are you satisfied with the opportunity given to you to ask questions?</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">12. Are you satisfied with the way your facilitators/teachers make learning easier for you?</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">13. Are you satisfied that your facilitator give you the opportunity to express yourself?</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">14. Are you satisfied with the way your facilitators/teachers use examples to help you understand what is being taught?</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">15. Are you satisfied with the way your facilitators/teachers use technologies to support learning and facilitation?
+                            Specific Technology(write in comments)</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Comments" name="bodies" id="" cols="30" rows="10"></textarea>
+                       
+                                
+                            </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">16. Are you satisfied with the way your facilitators/teachers emphasize on things that are important when facilitating?</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">17. Are you satisfied with the way your facilitators/teachers help you to reach a group consensus on how to approach a project?                              *Where applicable</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">18. Are you satisfied with the way your facilitators/teachers help you to develop communication skills such as stating ideas clearly?</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">19. Are you satisfied with the  Career Guidance & Counselling support Service or Unit?  (If there is no such unit then also mark NO)</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                    <option disabled selected>Select...</option>
+                                    <option value="yes">YES</option>
+                                    <option value="no">NO</option>
+                                </select>
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">20. Are you satisfied with the Institution's mechanism in place for appeal, feedback, and complaints? (* e.g.: Suggestion Box)
+                            Specific Mechanism?.....(Write in Comments)  If there is no such mechanism write NONE                                             
+                             If you have never used this mechanism also mark NO</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <div class="grid grid-cols-1 border rounded">
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Very Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Unsatisfied
+                                    </label>
+                                    <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Normal
+                                    </label>
+                                     
+                                    <label for="" class="p-2">
+                                        <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                        Satisfied 
+                                    </label>
+                                     <label for="" class="p-2">
+                                         <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                         Very satisfied 
+                                    </label>
+                                </div>
+                                <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Comments" name="bodies" id="" cols="30" rows="10"></textarea>
+                       
+                            </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">21. Would you recommend TVET as a first-choice option to a
+                            friend? ( Mark Yes or NO ONLY)                   Reason:………………(Write in comments)</p>
+                            <div class=" col-span-3 rounded space-y-1">
+                                <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                    <option disabled selected>Select...</option>
+                                    <option value="yes">YES</option>
+                                    <option value="no">NO</option>
+                                </select>
+                                <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Comments" name="bodies" id="" cols="30" rows="10"></textarea>
+                       
+                            </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="p-2 px-4 bg-green-600 hover:bg-green-700 text-white  rounded-3xl">Submit</button>
+                    </div>
+
+
+                    
+                </div>
+            </div>
+
+            
+
+              
+            </div>
+            <!-- end Content here -->
+
+           
+        </div>
+
+    </div>
+
+    <div class="mt-20 pt-20">
+        
+    </div>
+
+    <footer class="mt-10 border py-5 text-sm bg-white shadow-lg border-b-8 border-green-700">
+        <div class="text-center font-medium ">
+            <p>&copy; Copyright 2022 <a class="text-blue-800 hover:underline" href="#">CTVET</a>. All rights reserved </p>
+        </div>
+    </footer>
+
+
+    <script src="/public/js/script.js"></script>
+    
+</body>
+</html>

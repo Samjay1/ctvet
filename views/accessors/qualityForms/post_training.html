@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/public/images/logo.png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="public/images/logo.png" sizes="16x16">
+    <link rel='stylesheet' type='text/css' href='../public/css/style.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/public/css/index.min.css" />
+    <link rel="stylesheet" href="/public/css/mystyles.css" />
+
+    <title>TVET - Assessor</title>
+</head>
+<body style="font-family: 'Roboto', sans-serif;" class=" font-normal relative">
+    <!--TOP HEADER Appstore and Playstore links -->
+   
+
+
+
+     <!-- MAIN HEADER -->
+     <nav class="bg-white border-b-4 border-green-700 shadow-lg lg:bg-gray-100 text-gray-800 shadow-lg">
+        <!-- Mobile menu -->
+        <div class="flex justify-between w-11/12 m-auto">
+            
+            <div class="flex px-2 pt-2">
+                <a class="lg:mr-5" href="index.html">
+                    <img class="h-14 object-fill w-44 p-2" src="/public/images/logo.png" alt="">
+                </a>
+                
+            </div>
+            <div class="mt-2 py-3 h-16 flex space-x-8">
+                <a class="lg:block hidden px-3 py-2  border-b border-gray-100 hover:border-yellow-500 hover:text-yellow-500 transition duration-300 text-sm" href="dashboard.html">StaffID: <span class="font-bold">ST0023</span></a>
+                <a class="lg:block hidden px-3 py-2  border-b border-gray-100 hover:border-yellow-500 hover:text-yellow-500 transition duration-300 text-sm" href="password_reset.html">Change Password</a>
+                <a class="lg:block hidden px-3 py-2  border-b border-gray-100 hover:border-yellow-500 hover:text-yellow-500 transition duration-300 text-sm" href="login.html">Log Out</a>  
+                <!-- <a id="profilebtn" class="bg-gray-300 rounded-3xl shadow-lg  block" href="#"><img id="profileimg" class="h-9 w-9 object-cover object-top rounded-3xl" src="/public/images/d1.jpeg" alt=""></a> -->
+                <a id="profilebtn" class="text-yellow-500 block lg:hidden mt-3" href="#">
+                    <svg id="profileimg" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path id="profileimg" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- PROFILE DROPDOWN -->
+    <div class="relative">
+        <div id="menulist" class="absolute z-10 hidden block space-y-1 right-0 border w-56 bg-white  mx-1 my-1 rounded-lg">
+            <p class="border-b w-full hover:bg-yellow-500 hover:text-white"><a class="px-2 pr-6 py-2 block" href="dashboard.html"> StaffID: <span class="font-bold">ST0023</span></a></p>
+            <p class="border-b w-full hover:bg-yellow-500 hover:text-white"><a class="px-2 pr-6 py-2 block" href="password_reset.html"> Change Password</a></p>
+            <p class="border-b w-full hover:bg-yellow-500 hover:text-white"><a class="px-2 pr-6 py-2 block"  href="login.html"> Log Out</a></p>
+        </div>
+    </div>
+
+
+    <!-- MAIN SECTION -->
+    <div class="lg:w-10/12 w-11/12 m-auto my-10 ">
+          <!-- cards -->
+          <div class="grid lg:grid-cols-3 gap-4">
+
+            <!-- Employee card -->
+            <div class="rounded-lg bg-green-600 shadow-lg text-gray-800">
+                    <div class="flex pl-2  p-4  items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-9 w-9 ml-5 bg-green-700 rounded-3xl p-1 ">
+                            <path d="M11.584 2.376a.75.75 0 01.832 0l9 6a.75.75 0 11-.832 1.248L12 3.901 3.416 9.624a.75.75 0 01-.832-1.248l9-6z" />
+                            <path fill-rule="evenodd" d="M20.25 10.332v9.918H21a.75.75 0 010 1.5H3a.75.75 0 010-1.5h.75v-9.918a.75.75 0 01.634-.74A49.109 49.109 0 0112 9c2.59 0 5.134.202 7.616.592a.75.75 0 01.634.74zm-7.5 2.418a.75.75 0 00-1.5 0v6.75a.75.75 0 001.5 0v-6.75zm3-.75a.75.75 0 01.75.75v6.75a.75.75 0 01-1.5 0v-6.75a.75.75 0 01.75-.75zM9 12.75a.75.75 0 00-1.5 0v6.75a.75.75 0 001.5 0v-6.75z" clip-rule="evenodd" />
+                            <path d="M12 7.875a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" />
+                          </svg>
+                          
+                          <div class="ml-4">
+                              <p class="text-md">5</p>
+                              <p class="text-xs font-base">Assigned TVETS</p>
+                          </div>
+                      </div>
+
+
+                <a href="dashboard.html" class="text-gray-100">
+                      <div class="flex space-x-2 text-xs p-2 px-5 bg-green-700 hover:bg-green-900 duration-200 transition rounded-b-lg items-center">
+                        <p>See more </p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd" d="M3.75 12a.75.75 0 01.75-.75h13.19l-5.47-5.47a.75.75 0 011.06-1.06l6.75 6.75a.75.75 0 010 1.06l-6.75 6.75a.75.75 0 11-1.06-1.06l5.47-5.47H4.5a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                          </svg>
+                          
+                      </div>
+                </a>
+                  
+               
+            </div>
+            <!-- end Employee card -->
+            
+            <!-- Branches card -->
+            <div class="rounded-lg bg-yellow-400 shadow-lg text-gray-800">
+                    <div class="flex pl-2  p-4 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-9 w-9 ml-5 bg-yellow-500 rounded-3xl p-1 ">
+                            <path d="M11.584 2.376a.75.75 0 01.832 0l9 6a.75.75 0 11-.832 1.248L12 3.901 3.416 9.624a.75.75 0 01-.832-1.248l9-6z" />
+                            <path fill-rule="evenodd" d="M20.25 10.332v9.918H21a.75.75 0 010 1.5H3a.75.75 0 010-1.5h.75v-9.918a.75.75 0 01.634-.74A49.109 49.109 0 0112 9c2.59 0 5.134.202 7.616.592a.75.75 0 01.634.74zm-7.5 2.418a.75.75 0 00-1.5 0v6.75a.75.75 0 001.5 0v-6.75zm3-.75a.75.75 0 01.75.75v6.75a.75.75 0 01-1.5 0v-6.75a.75.75 0 01.75-.75zM9 12.75a.75.75 0 00-1.5 0v6.75a.75.75 0 001.5 0v-6.75z" clip-rule="evenodd" />
+                            <path d="M12 7.875a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" />
+                          </svg>
+                          
+                          <div class="ml-4">
+                              <p class="text-md">3</p>
+                              <p class="text-xs font-base">Assessed TVETS</p>
+                          </div>
+                      </div>
+
+                      <a href="assessed.html" class="text-gray-100">
+                        <div class="flex space-x-2 text-xs p-2 px-5 bg-yellow-600 hover:bg-yellow-900 duration-200 transition rounded-b-lg items-center">
+                          <p>See more </p>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                              <path fill-rule="evenodd" d="M3.75 12a.75.75 0 01.75-.75h13.19l-5.47-5.47a.75.75 0 011.06-1.06l6.75 6.75a.75.75 0 010 1.06l-6.75 6.75a.75.75 0 11-1.06-1.06l5.47-5.47H4.5a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                            </svg>
+                            
+                        </div>
+                  </a>
+              
+                  
+            </div>
+            <!-- end Branches card -->
+
+            <!-- Employee card -->
+            <div class="rounded-lg bg-red-600 shadow-lg text-gray-800">
+            
+                    <div class="flex pl-2  p-4 items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-9 w-9 ml-5 bg-red-500 rounded-3xl p-1">
+                            <path d="M12 9a3.75 3.75 0 100 7.5A3.75 3.75 0 0012 9z" />
+                            <path fill-rule="evenodd" d="M9.344 3.071a49.52 49.52 0 015.312 0c.967.052 1.83.585 2.332 1.39l.821 1.317c.24.383.645.643 1.11.71.386.054.77.113 1.152.177 1.432.239 2.429 1.493 2.429 2.909V18a3 3 0 01-3 3h-15a3 3 0 01-3-3V9.574c0-1.416.997-2.67 2.429-2.909.382-.064.766-.123 1.151-.178a1.56 1.56 0 001.11-.71l.822-1.315a2.942 2.942 0 012.332-1.39zM6.75 12.75a5.25 5.25 0 1110.5 0 5.25 5.25 0 01-10.5 0zm12-1.5a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" />
+                          </svg>
+                          <div class="ml-4">
+                              <p class="text-md">5</p>
+                              <p class="text-xs font-base">Media Uploads</p>
+                          </div>
+                      </div>
+
+                      <a href="media_upload.html" class="text-gray-100">
+                        <div class="flex space-x-2 text-xs p-2 px-5 bg-red-700 hover:bg-red-900 duration-200 transition rounded-b-lg items-center">
+                          <p>See more </p>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                              <path fill-rule="evenodd" d="M3.75 12a.75.75 0 01.75-.75h13.19l-5.47-5.47a.75.75 0 011.06-1.06l6.75 6.75a.75.75 0 010 1.06l-6.75 6.75a.75.75 0 11-1.06-1.06l5.47-5.47H4.5a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                            </svg>
+                            
+                        </div>
+                  </a>
+            </div>
+         
+        </div>
+        <!-- end Cards -->
+
+
+        <div class="shadow-xl rounded-lg border my-10">
+               <!-- Content here -->
+               
+            <div class="p-4 bg-white mt-5 rounded-lg space-y-3">
+                <p class="text-xl uppercase font-bold">6. (c) Post-Training Delivery</p>
+
+                <p>TVET: <span class='font-bold text-2xl'>ABC 1</span></p>
+           
+            <div class="my-5">
+                <a href="../quality_checklist.html" class="text-green-700 underline px-3 p-1 rounded-3xl">Go Back</a>
+
+               <div class="mx-7 italic">
+                    <ol class="list-disc">
+                        <li>On a scale of 1-5, where 
+                        <br> 1 – Non-Compliant (Must improve as a key priority), 
+                        <br> 2 - Below average (Non-Compliant- has major issues to address. 
+                        <br> 3- Average (Compliant has less issues to address), 
+                        <br> 4 – compliant level, (just minor issues to address), 
+                        <br> 5 – fully compliant, (no issues to address), state the level of compliance by the Institution in each of the following criteria
+                        </li>
+                        <li>
+                            Verify all Institutional data held on record (Institutional Data Checklist) before commencing this questionnaire
+                            <br>Take note of any changes
+                        </li>
+
+                        <li class="font-bold">
+                            These indicators help to identify whether these facilities are available and fit for purpose.
+                        </li>
+                    </ol>
+               </div>
+
+                <div class="text-base font-normal space-y-1 my-10 border-t border-green-600">
+                    <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">
+                           6.13 Is the IV report up to date?
+                           <br><span class="font-bold">(Indicator) Evidence of IV Report</span>
+                        </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    1.Non-Compliant 
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    2.Below average 
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     3.Average
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    4.Compliant level 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     5.Fully compliant
+                                </label>
+                            </div>
+                            <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Remarks" name="bodies" id="" cols="30" rows="10"></textarea>
+                        </div>
+                     </div>
+                     <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">
+                          6.14 Have the EV feedback been stated in the IV8 and implemented?
+                           <br><span class="font-bold">(Indicator)  Evidence of EV report feedback and its implementation</span>
+                        </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    1.Non-Compliant 
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    2.Below average 
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     3.Average
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    4.Compliant level 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     5.Fully compliant
+                                </label>
+                            </div>
+                            <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Remarks" name="bodies" id="" cols="30" rows="10"></textarea>
+                        </div>
+                     </div>
+                     <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">
+                           6.15 Is there an evidence of IV records of programme team meeting? (IV3, IV4 and IV5)
+                           <br><span class="font-bold">(Indicator) Evidence of IV records of programme team meeting</span>
+                        </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    1.Non-Compliant 
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    2.Below average 
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     3.Average
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    4.Compliant level 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     5.Fully compliant
+                                </label>
+                            </div>
+                            <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Remarks" name="bodies" id="" cols="30" rows="10"></textarea>
+                        </div>
+                     </div>
+                     <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">
+                        6.16  Are all re-assessment instrument stamped with the re-assessment stamp?
+                           <br><span class="font-bold">(Indicator)  Evidence of re-assessment instruments stamped</span>
+                        </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    1.Non-Compliant 
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    2.Below average 
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     3.Average
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    4.Compliant level 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     5.Fully compliant
+                                </label>
+                            </div>
+                            <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Remarks" name="bodies" id="" cols="30" rows="10"></textarea>
+                        </div>
+                     </div>
+                     <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">
+                        6.17  Are result 1 form(s) filled and the correct EV visit date  indicated and attached to the evidence?
+                           <br><span class="font-bold">(Indicator)  Evidence of Result 1 form(s) filled and correct EV visit date indicated</span>
+                        </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    1.Non-Compliant 
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    2.Below average 
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     3.Average
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    4.Compliant level 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     5.Fully compliant
+                                </label>
+                            </div>
+                            <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Remarks" name="bodies" id="" cols="30" rows="10"></textarea>
+                        </div>
+                     </div>
+                     <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">
+                        6.18 Is there an evidence of complete programme structure achieved by each learner with the correct credit value for the qualification level?
+                           <br><span class="font-bold">(Indicator)  Evidence of complete programme structure</span>
+                        </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    1.Non-Compliant 
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    2.Below average 
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     3.Average
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    4.Compliant level 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     5.Fully compliant
+                                </label>
+                            </div>
+                            <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Remarks" name="bodies" id="" cols="30" rows="10"></textarea>
+                        </div>
+                     </div>
+                     <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">
+                        6.19  Is there an evidence of facilitator delivery evaluation conducted?
+                           <br><span class="font-bold">(Indicator) Evidence of facilitator delivery evaluation done by learners</span>
+                        </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    1.Non-Compliant 
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    2.Below average 
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     3.Average
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    4.Compliant level 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     5.Fully compliant
+                                </label>
+                            </div>
+                            <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Remarks" name="bodies" id="" cols="30" rows="10"></textarea>
+                        </div>
+                     </div>
+                     <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">
+                        6.20  Is there an evidence of learning session plan for each unit?
+                           <br><span class="font-bold">(Indicator)  Evidence of learning session plan for each unit</span>
+                        </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    1.Non-Compliant 
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    2.Below average 
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     3.Average
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    4.Compliant level 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     5.Fully compliant
+                                </label>
+                            </div>
+                            <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Remarks" name="bodies" id="" cols="30" rows="10"></textarea>
+                        </div>
+                     </div>
+                     <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">
+                        6.21  Is there an evidence of staff continuous improvement programme in place and implemented?
+                           <br><span class="font-bold">(Indicator)Evidence of staff continuous improvement programme</span>
+                        </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    1.Non-Compliant 
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    2.Below average 
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     3.Average
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    4.Compliant level 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     5.Fully compliant
+                                </label>
+                            </div>
+                            <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Remarks" name="bodies" id="" cols="30" rows="10"></textarea>
+                        </div>
+                     </div>
+                     <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">
+                        6.22  Is there a WEL log book which has been filled and stamped for each learner?
+                           <br><span class="font-bold">(Indicator) Evidence of WEL log book stamped for each learner</span>
+                        </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    1.Non-Compliant 
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    2.Below average 
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     3.Average
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    4.Compliant level 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     5.Fully compliant
+                                </label>
+                            </div>
+                            <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Remarks" name="bodies" id="" cols="30" rows="10"></textarea>
+                        </div>
+                     </div>
+                     <div class="grid lg:grid-cols-7 gap-1 py-4">
+                        <p class="p-2  col-span-2">
+                        6.23  Is there an evidence of summative assessment record sheet for each unit?
+                           <br><span class="font-bold">(Indicator) Evidence of summative Assessment Records</span>
+                        </p>
+                        <div class=" col-span-3 rounded space-y-1">
+                            <select class="border border-slate-300 w-full rounded-md py-2 pl-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"   id="level" name="school" >
+                                <option disabled selected>Select...</option>
+                                <option value="yes">YES</option>
+                                <option value="no">NO</option>
+                            </select>
+                            <div class="grid grid-cols-1 border rounded">
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    1.Non-Compliant 
+                                </label>
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    2.Below average 
+                                </label>
+                                <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     3.Average
+                                </label>
+                                 
+                                <label for="" class="p-2">
+                                    <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                    4.Compliant level 
+                                </label>
+                                 <label for="" class="p-2">
+                                     <input class=" border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" type="radio"  name="name">
+                                     5.Fully compliant
+                                </label>
+                            </div>
+                            <textarea class="w-full col-span-3 border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Remarks" name="bodies" id="" cols="30" rows="10"></textarea>
+                        </div>
+                     </div>
+
+                    
+ 
+                    <div class="mx-4">
+                        <p class="text-lg">Total: <span class="text-5xl text-blue-800">15</span></p>
+                        <textarea class="w-full border border-slate-300  rounded-md py-2 pl-3  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm" placeholder="Additional Comments" name="bodies" id="" cols="30" rows="10"></textarea>
+                            
+                    </div>    
+                 
+            
+
+                    <div class="text-center">
+                        <button class="p-2 px-4 bg-green-600 hover:bg-green-700 text-white  rounded-3xl">Submit</button>
+                    </div>
+ 
+                    
+                </div>
+            </div>
+
+            
+
+              
+            </div>
+            <!-- end Content here -->
+
+           
+        </div>
+
+    </div>
+
+    <div class="mt-20 pt-20">
+        
+    </div>
+
+    <footer class="mt-10 border py-5 text-sm bg-white shadow-lg border-b-8 border-green-700">
+        <div class="text-center font-medium ">
+            <p>&copy; Copyright 2022 <a class="text-blue-800 hover:underline" href="#">CTVET</a>. All rights reserved </p>
+        </div>
+    </footer>
+
+
+    <script src="/public/js/script.js"></script>
+    
+</body>
+</html>
